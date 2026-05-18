@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizify AR | Assessment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Advanced Animated Background -->
+    <div class="background-wrapper">
+        <div class="mesh-gradient">
+            <div class="mesh-ball ball-1"></div>
+            <div class="mesh-ball ball-2"></div>
+            <div class="mesh-ball ball-3"></div>
+        </div>
+    </div>
+
+    <main class="quiz-container">
+        <!-- Start Screen -->
+        <section id="start-screen" class="screen active">
+            <div class="logo-container">
+                <div class="logo-icon">AR</div>
+                <h1>Quizify AR</h1>
+                <p class="subtitle">Experience the next generation of knowledge assessment with our premium platform.</p>
+            </div>
+            
+            <div class="quiz-stats">
+                <div class="stat-card">
+                    <span class="stat-label">Questions</span>
+                    <span class="stat-value" id="total-questions-count">10</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Category</span>
+                    <span class="stat-value">Technology</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="btn btn-primary">
+                Begin Assessment
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </button>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+            <header class="quiz-header">
+                <div class="progress-wrapper">
+                    <div class="progress-info">
+                        <span class="progress-label">Assessment Progress</span>
+                        <span class="progress-count"><span id="current-question-num">1</span>/<span id="total-questions-num">10</span></span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="question-container">
+                <h2 id="question-text">Loading your next challenge...</h2>
+                <div id="options-container" class="options-list">
+                    <!-- Options injected via JS -->
+                </div>
+            </div>
+
+            <footer class="quiz-footer">
+                <button id="next-btn" class="btn btn-primary" disabled>
+                    Continue
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </button>
+            </footer>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+            <div class="result-header">
+                <span id="result-emoji" class="confetti-icon">🏆</span>
+                <h2 id="result-title">Assessment Complete</h2>
+            </div>
+
+            <div class="score-display">
+                <svg class="score-svg" width="200" height="200">
+                    <circle class="score-bg" cx="100" cy="100" r="90"></circle>
+                    <circle id="score-progress-circle" class="score-progress" cx="100" cy="100" r="90"></circle>
+                </svg>
+                <div class="score-content">
+                    <span id="final-score" class="score-number">0</span>
+                    <span class="score-label">Points</span>
+                </div>
+            </div>
+
+            <p id="result-message" class="result-message">You've demonstrated exceptional technical knowledge.</p>
+
+            <div class="result-actions">
+                <button id="restart-btn" class="btn btn-outline">Retake Quiz</button>
+                <button id="share-btn" class="btn btn-primary">Download Report</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
