@@ -50,7 +50,7 @@ quiz_app/
 - **Clean Code**: Modular JavaScript functions and well-commented code for easy maintenance and scalability.
 
 ## Live demo 
-
+https://ahmed-2109.github.io/Quizify-AR/
 
 ---
 *Designed by Syed Ahmed Afridi*
